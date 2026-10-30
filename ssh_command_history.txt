@@ -1,0 +1,47 @@
+  124  ssh -l vbox 192.168.56.102
+  126  sshpass -p "wrongpass1" ssh -l vbox 192.168.56.102 "exit" 2>/dev/null\nsshpass -p "wrongpass2" ssh -l vbox 192.168.56.102 "exit" 2>/dev/null\nsshpass -p "wrongpass3" ssh -l vbox 192.168.56.102 "exit" 2>/dev/null
+  127  ssh -l vbox 192.168.56.102 "whoami\nvbox
+  128  ssh -l vbox 192.168.56.102 "whoami"
+  130  sshpass -p "wrongpass1" ssh -l vbox 192.168.56.102 "exit" 2>/dev/null\nsshpass -p "wrongpass2" ssh -l vbox 192.168.56.102 "exit" 2>/dev/null\nsshpass -p "wrongpass3" ssh -l vbox 192.168.56.102 "exit" 2>/dev/null
+  131  ssh -l vbox 192.168.56.102 "whoami"
+  132  ssh -l vbox 192.168.56.102 "cmd.exe /c whoami"
+  133  ssh -l vbox 192.168.56.102 "powershell -Command Get-LocalUser"
+  134  ssh -l vbox 192.168.56.102 "cmd.exe /c whoami"
+  135  ssh -l vbox 192.168.56.102 "powershell -Command Get-LocalUser"
+  136  ssh -l vbox 192.168.56.102
+  137  ssh -l vbox 192.168.56.102 "whoami"\nssh -l vbox 192.168.56.102 "net user"\nssh -l vbox 192.168.56.102 "ipconfig"
+  139  ssh -l vbox 192.168.565.102
+  140  ssh -l vbox 192.168.56.102
+  141  ssh -l vbox 192.168.56.102 "whoami"\nssh -l vbox 192.168.56.102 "net user"\nssh -l vbox 192.168.56.102 "ipconfig"
+  142  ssh -l vbox 192.168.56.102 "net user"
+  143  ssh -l vbox 192.168.56.102 "tasklist"
+  144  ssh -l vbox 192.168.56.102 "ipconfig /all"
+  145  ssh -l vbox 192.168.56.102 "net share"
+  146  ssh -l vbox 192.168.56.102 "net localgroup administrator"
+  147  journalctl _COMM=sshd
+  148  journalctl _UID=0\njournalctl SYSLOG_IDENTIFIER=sshd
+  149  journalctl SYSLOG_IDENTIFIER=sshd
+  159  journalctl _COMM=sshd --since "30 minutes ago"
+  161  sshpass -p "wrongpass1" ssh -l vbox 192.168.56.102 "whoami" 2>/dev/null
+  162  sshpass -p "wrongpass2" ssh -l vbox 192.168.56.102 "whoami" 2>/dev/null
+  163  sshpass -p "vbox" ssh -l vbox 192.168.56.102 "whoami" 2>/dev/null
+  164  sshpass -p "wrongpass3" ssh -l vbox 192.168.56.102 "whoami" 2>/dev/null
+  165  journalctl _COMM=sshd -o verbose --since "10 minutes ago"
+  166  journalctl _COMM=ssh -o verbose --since "10 minutes ago"
+  168  nano ssh_brute_force_simulation.sh
+  170  ./ssh_brute_force_simulation.sh
+  171  sudo ./ssh_brute_force_simulation.sh
+  174  cat ssh_attack_log.txt
+  175  ./ssh_brute_force_simulation.sh
+  179  ls ssh_brute_force_lab
+  180  cd ssh_brute_force_lab
+  181  ./ssh_brute_force_simulation.sh
+  183  chmod +x ssh_brute_force_simulation.sh
+  184  ./ssh_brute_force_simulation.sh
+  186  cat ssh_attack_log.txt
+  189  rm ssh_brute_force_simulation.sh
+  192  history | grep ssh > ssh_command_history.txt
+  193  cat ssh_command_history.txt
+  195  cat ssh_attack_log.txt
+  196  ./ssh_brute_force_simulation.sh
+  198  cat ssh_attack_log.txt
